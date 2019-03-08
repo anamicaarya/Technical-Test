@@ -1,0 +1,36 @@
+<% if params[:preview_button] %>
+    <h5>Are these the attributes  you want to save?</h5>
+    <p>
+    <%= f.label:title %>
+    <%= f.text_field:title %>
+    </p>
+
+    <<p></p>>
+    <%= f.label:file_path %>
+    <%= f.text_field:file_path %>
+    </p>
+
+    <p>
+    <%= f.submit %>
+    </p>
+
+ <% end %>
+<%= submit_tag 'Preview', :name => 'preview_button' %>
+
+
+<%= form_for @dataset do |f| %>
+<div>
+<%= f.label:title %>
+<%= f.text_field:title %>
+</div>
+
+<div>
+<%= f.label:file_path %>
+<%= f.text_field:file_path %>
+</div>
+
+<div>
+<%= f.submit %>
+</div>
+
+<% end %>

@@ -1,0 +1,21 @@
+<h1>Dataset List</h1>
+
+  <table>
+    <thead>
+      <th>title</th>
+      <th>file_path</th>
+    </thead>
+
+    <% @datasets.each do |dataset| %>
+    <tr>
+      <td><%= dataset.title %></td>
+      <td><%= dataset.file_path %></td>
+      <td>
+        <%= link_to "edit", edit_dataset_path(dataset) %>
+        <%= link_to "Delete", dataset, method: :delete, data: {confirm: "Are you sure you want to delete this entry" } %>
+      </td>
+    </tr>
+   <% end %>
+   <%= link_to "create", new_dataset_path %>
+
+  </table>
